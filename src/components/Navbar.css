@@ -1,0 +1,42 @@
+.navbar {
+  background-color: hsl(239, 86%, 73%); 
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar-logo a {
+  color: #4a148c; 
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* lista de enlaces */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* estilo base de los enlaces */
+.nav-link {
+  text-decoration: none;
+  color: #4a148c; /* morado oscuro */
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+/* al pasar el mouse */
+.nav-link:hover {
+  color: #7b1fa2; /* morado mas vivo */
+}
+
+/* si esta activo */
+.nav-link.active {
+  border-bottom: 2px solid #7b1fa2;
+  padding-bottom: 2px;
+}
