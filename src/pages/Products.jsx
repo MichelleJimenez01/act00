@@ -1,4 +1,6 @@
-import React from 'react';
+// este es el componente de la pagina de productos
+// aqui se muestra la lista de usuarios
+
 import ProductList from '../components/ProductList';
 
 const Products = () => {
@@ -10,3 +12,4 @@ const Products = () => {
 };
 
 export default Products;
+

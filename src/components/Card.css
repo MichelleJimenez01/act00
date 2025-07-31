@@ -6,4 +6,16 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 200px;
+  background-color: #f3e8ff; /* color lila claro */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
 }

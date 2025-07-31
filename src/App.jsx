@@ -1,4 +1,6 @@
-import React from 'react';
+// componente principal de la app
+// configura las rutas
+
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -18,3 +20,4 @@ const App = () => {
 };
 
 export default App;
+
