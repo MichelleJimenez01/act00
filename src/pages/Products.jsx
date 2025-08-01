@@ -1,5 +1,5 @@
-// este es el componente de la pagina de productos
-// aqui se muestra la lista de usuarios
+// este componente representa la pagina de productos
+// simplemente muestra la lista de productos usando el componente productlist
 
 import ProductList from '../components/ProductList';
 
@@ -12,4 +12,3 @@ const Products = () => {
 };
 
 export default Products;
-

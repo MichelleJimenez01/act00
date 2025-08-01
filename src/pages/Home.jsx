@@ -1,12 +1,15 @@
-import React from 'react';
-
+import HomePages from '../components/HomePages';
 const Home = () => {
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Bienvenido a la Tienda</h1>
-      <p>Visita la sección de productos para ver lo que ofrecemos.</p>
+    <div>
+      <HomePages />
     </div>
   );
 };
 
 export default Home;
+
+
+
+
+

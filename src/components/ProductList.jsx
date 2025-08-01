@@ -1,65 +1,58 @@
-// este componente carga la lista de usuarios desde una api
-// permite buscar por nombre o correo y llevar un contador
+// este componente carga la lista de productos desde una api
+// permite buscar por nombre o categoria
 
 import { useEffect, useState } from 'react';
-import { UserCard } from './UserCard';
+import { ProductCard } from './ProductCard';
 import './Card.css';
 import './ProductList.css';
 
 const ProductList = () => {
-  const [count, setCount] = useState(0);
-  const [users, setUsers] = useState([]);
+  // lista de productos traidos desde la api
+  const [products, setProducts] = useState([]);
+
+  // texto de busqueda escrito por el usuario
   const [searchTerm, setSearchTerm] = useState('');
 
-  // se obtiene la lista de usuarios desde la api
+  // se obtiene la lista de productos desde la api fakestore
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchProducts = async () => {
       try {
-        const res = await fetch('https://dummyjson.com/users');
+        const res = await fetch('https://fakestoreapi.com/products');
         const data = await res.json();
-        setUsers(data.users);
+        setProducts(data); // se guarda el arreglo completo en el estado
       } catch (error) {
-        console.error('error al obtener usuarios:', error);
+        console.error('error al cargar productos', error);
       }
     };
 
-    fetchUsers();
-  }, [count]);
+    fetchProducts();
+  }, []); // se ejecuta solo una vez al cargar
 
-  // actualiza el contador
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
-  // actualiza el texto de busqueda
+  // funcion que actualiza el valor del campo de busqueda
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  // filtra los usuarios segun el texto
-  const filteredUsers = users.filter((user) =>
-    `${user.firstName} ${user.lastName} ${user.email}`.toLowerCase().includes(searchTerm.toLowerCase())
+  // se filtran los productos segun el texto ingresado
+  const filteredProducts = products.filter((product) =>
+    `${product.title} ${product.category}`.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="product-list">
-      <h2>contador: {count}</h2>
-      <button onClick={handleClick}>aumentar contador</button>
-
       <input
         type="text"
-        placeholder="buscar por nombre o correo"
+        placeholder="buscar por nombre o categoria"
         value={searchTerm}
         onChange={handleSearch}
         className="search-input"
       />
 
+      {/* se muestran las tarjetas de producto filtradas */}
       <section className="product-container">
-        {
-          filteredUsers.map((user) => (
-            <UserCard key={user.id} user={user} />
-          ))
-        }
+        {filteredProducts.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </section>
     </div>
   );

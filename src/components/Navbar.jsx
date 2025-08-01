@@ -1,23 +1,18 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import './Navbar.css'; // se importan los estilos
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation(); 
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/">mi sitio</Link>
-      </div>
+      <div className="navbar-title">Merch y mas</div>
       <ul className="navbar-links">
-        <li>
-          <NavLink to="/" end className="nav-link">
-            inicio
-          </NavLink>
+        <li className={location.pathname === '/' ? 'active' : ''}>
+          <Link to="/">Inicio</Link>
         </li>
-        <li>
-          <NavLink to="/productos" className="nav-link">
-            productos
-          </NavLink>
+        <li className={location.pathname === '/productos' ? 'active' : ''}>
+          <Link to="/productos">Productos</Link>
         </li>
       </ul>
     </nav>
