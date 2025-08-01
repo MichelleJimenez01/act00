@@ -42,7 +42,7 @@ const ProductList = () => {
     <div className="product-list">
       <input
         type="text"
-        placeholder="buscar por nombre o categoria"
+        placeholder="Buscar por nombre o categoria"
         value={searchTerm}
         onChange={handleSearch}
         className="search-input"

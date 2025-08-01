@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-title">Merch y mas</div>
+      <div className="navbar-title">Merch y Mas</div>
       <ul className="navbar-links">
         <li className={location.pathname === '/' ? 'active' : ''}>
           <Link to="/">Inicio</Link>

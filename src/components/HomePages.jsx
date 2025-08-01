@@ -28,7 +28,7 @@ const HomePages = () => {
       {/* seccion de llamada a la accion */}
       <section className="promo">
         <h2>envios gratis</h2>
-        <p>por compras mayores a $50.000 en todo el pais Colombia</p>
+        <p>por compras mayores a $100.000 en todo el pais Colombia</p>
       </section>
     </div>
   );

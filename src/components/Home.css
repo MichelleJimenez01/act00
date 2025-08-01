@@ -8,7 +8,7 @@
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* fondo pastel degradado */
+  background: linear-gradient(135deg, #e0c3fc, #a8ccf0); /* fondo pastel degradado */
   color: #fff;
   border-radius: 12px;
 }
@@ -62,6 +62,7 @@
 .category-card:hover {
   transform: scale(1.05);
 }
+
 
 .category-card img {
   width: 100%;

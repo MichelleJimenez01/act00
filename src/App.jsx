@@ -1,5 +1,4 @@
-// este es el componente principal de la aplicacion
-// define las rutas principales del sitio
+// este es el componente principal de la aplicacion,  define las rutas principales del sitio
 
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';

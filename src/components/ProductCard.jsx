@@ -37,11 +37,11 @@ export const ProductCard = ({ product }) => {
       </button>
 
       {/* si showdetails es true, se muestra la descripcion */}
-      {showDetails && <p className="description">{description}</p>}
+      {showDetails && <p className="Description">{description}</p>}
 
       {/* boton para marcar como comprado o no */}
       <button onClick={handlePurchase}>
-        {isPurchased ? 'comprado' : 'comprar'}
+        {isPurchased ? 'agregado' : 'agregar a carrito'}
       </button>
     </div>
   );
